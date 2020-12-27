@@ -12,6 +12,10 @@ function(dump_variables)
     endforeach()
 endfunction()
 
+if(MSVC)
+    add_compile_options("/utf-8")
+endif()
+
 find_package(Threads REQUIRED)
 
 add_executable(hello hello.cpp)

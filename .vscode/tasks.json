@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "cmake",
+            "label": "CMake - Unix Makefiles",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -16,9 +16,34 @@
             "group": "build"
         },
         {
-            "label": "build",
+            "label": "CMake - NMake Makefiles",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-Bbuild",
+                "-G",
+                "NMake Makefiles",
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Make all",
             "type": "shell",
             "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "args": [],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "NMake all",
+            "type": "shell",
+            "command": "nmake",
             "options": {
                 "cwd": "${workspaceFolder}/build"
             },
