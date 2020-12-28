@@ -11,8 +11,7 @@
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
                 "-Bbuild",
-                "-G",
-                "Unix Makefiles",
+                "-G'Unix Makefiles'",
             ],
             "problemMatcher": [],
             "group": "build"
@@ -25,8 +24,7 @@
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
                 "-Bbuild",
-                "-G",
-                "NMake Makefiles",
+                "-G'NMake Makefiles'",
             ],
             "problemMatcher": [],
             "group": "build"
@@ -39,14 +37,13 @@
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
                 "-Bbuild",
-                "-G",
-                "Ninja",
+                "-GNinja",
             ],
             "problemMatcher": [],
             "group": "build"
         },
         {
-            "label": "Make all",
+            "label": "Make build all",
             "type": "shell",
             "command": "make",
             "options": {
@@ -70,7 +67,7 @@
             "group": "build"
         },
         {
-            "label": "NMake all",
+            "label": "NMake build all",
             "type": "shell",
             "command": "nmake",
             "options": {
@@ -94,7 +91,7 @@
             "group": "build"
         },
         {
-            "label": "Ninja all",
+            "label": "Ninja build all",
             "type": "shell",
             "command": "ninja",
             "options": {
