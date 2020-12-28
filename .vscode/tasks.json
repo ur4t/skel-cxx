@@ -11,6 +11,8 @@
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
                 "-Bbuild",
+                "-G",
+                "Unix Makefiles",
             ],
             "problemMatcher": [],
             "group": "build"
@@ -30,6 +32,20 @@
             "group": "build"
         },
         {
+            "label": "CMake - Ninja",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-Bbuild",
+                "-G",
+                "Ninja",
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
             "label": "Make all",
             "type": "shell",
             "command": "make",
@@ -37,6 +53,19 @@
                 "cwd": "${workspaceFolder}/build"
             },
             "args": [],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Make clean",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "args": [
+                "clean",
+            ],
             "problemMatcher": [],
             "group": "build"
         },
@@ -50,6 +79,43 @@
             "args": [],
             "problemMatcher": [],
             "group": "build"
-        }
+        },
+        {
+            "label": "NMake clean",
+            "type": "shell",
+            "command": "nmake",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "args": [
+                "clean",
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Ninja all",
+            "type": "shell",
+            "command": "ninja",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "args": [],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Ninja clean",
+            "type": "shell",
+            "command": "ninja",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "args": [
+                "clean",
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
     ]
 }
