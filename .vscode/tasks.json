@@ -4,33 +4,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "CMake - Unix Makefiles",
+            "label": "CMake generate - Default",
             "type": "shell",
             "command": "cmake",
             "args": [
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
                 "-Bbuild",
-                "-G'Unix Makefiles'",
             ],
             "problemMatcher": [],
             "group": "build"
         },
         {
-            "label": "CMake - NMake Makefiles",
-            "type": "shell",
-            "command": "cmake",
-            "args": [
-                "-DCMAKE_BUILD_TYPE=Debug",
-                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
-                "-Bbuild",
-                "-G'NMake Makefiles'",
-            ],
-            "problemMatcher": [],
-            "group": "build"
-        },
-        {
-            "label": "CMake - Ninja",
+            "label": "CMake generate - Ninja",
             "type": "shell",
             "command": "cmake",
             "args": [
@@ -43,72 +29,24 @@
             "group": "build"
         },
         {
-            "label": "Make build all",
+            "label": "CMake build all",
             "type": "shell",
-            "command": "make",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "args": [],
-            "problemMatcher": [],
-            "group": "build"
-        },
-        {
-            "label": "Make clean",
-            "type": "shell",
-            "command": "make",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
+            "command": "cmake",
             "args": [
-                "clean",
+                "--build",
+                "build",
             ],
             "problemMatcher": [],
             "group": "build"
         },
         {
-            "label": "NMake build all",
+            "label": "CMake clean",
             "type": "shell",
-            "command": "nmake",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "args": [],
-            "problemMatcher": [],
-            "group": "build"
-        },
-        {
-            "label": "NMake clean",
-            "type": "shell",
-            "command": "nmake",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
+            "command": "cmake",
             "args": [
-                "clean",
-            ],
-            "problemMatcher": [],
-            "group": "build"
-        },
-        {
-            "label": "Ninja build all",
-            "type": "shell",
-            "command": "ninja",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "args": [],
-            "problemMatcher": [],
-            "group": "build"
-        },
-        {
-            "label": "Ninja clean",
-            "type": "shell",
-            "command": "ninja",
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
-            "args": [
+                "--build",
+                "build",
+                "--target",
                 "clean",
             ],
             "problemMatcher": [],

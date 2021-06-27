@@ -10,6 +10,7 @@
             "name": "Debug",
             "program": "${workspaceFolder}/build/hello",
             "args": [],
+            "terminal": "console",
             "cwd": "${workspaceFolder}/build"
         }
     ]
